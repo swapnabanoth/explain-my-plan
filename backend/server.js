@@ -11,6 +11,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.json());
 
 app.use("/api/analyze", analyzeRoute);
+const PORT = process.env.PORT || 5000;
 
 // Debug check
 console.log("OPENROUTER KEY:", process.env.OPENROUTER_API_KEY);

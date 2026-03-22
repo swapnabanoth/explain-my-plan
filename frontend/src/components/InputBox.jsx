@@ -5,7 +5,7 @@ export default function InputBox({ setResult }) {
   const [text, setText] = useState("");
 
   const handleSubmit = async () => {
-    const res = await axios.post("http://localhost:5000/api/analyze", {
+    const res = await axios.post("https://explain-my-plan-backend.onrender.com/api/analyze", {
       idea: text,
     });
     setResult(res.data);
